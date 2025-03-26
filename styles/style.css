@@ -1,0 +1,66 @@
+/* Animation for top player */
+.top-player {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Medal colors with gradients */
+.gold {
+    background: linear-gradient(135deg, rgba(255,215,0,0.2) 0%, rgba(255,255,255,1) 100%);
+}
+
+.silver {
+    background: linear-gradient(135deg, rgba(192,192,192,0.2) 0%, rgba(255,255,255,1) 100%);
+}
+
+.bronze {
+    background: linear-gradient(135deg, rgba(205,127,50,0.2) 0%, rgba(255,255,255,1) 100%);
+}
+
+/* Rank badges */
+.rank-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+/* Table row transitions */
+.table-hover tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Toast notification */
+.toast {
+    transition: opacity 0.3s ease;
+}
+
+/* Input focus effects */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25);
+    border-color: #86b7fe;
+}
