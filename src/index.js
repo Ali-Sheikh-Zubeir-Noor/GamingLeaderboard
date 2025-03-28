@@ -1,14 +1,14 @@
-// API URL - Replace with your actual API endpoint
-const BASE_URL = 'http://localhost:3000/players';
+// URL
+const BASE_URL = 'https://my-app-backend-yjdj.onrender.com/api/players';
 
-// DOM Elements
+// Fetching DOM Elements
 const playerForm = document.getElementById('playerForm');
 const leaderboardBody = document.getElementById('leaderboardBody');
 const toastEl = document.getElementById('liveToast');
 const toastBody = toastEl.querySelector('.toast-body');
 const toast = new bootstrap.Toast(toastEl);
 
-// Event Listeners (3 required)
+// Event Listeners 
 document.addEventListener('DOMContentLoaded', loadPlayers);
 playerForm.addEventListener('submit', handleFormSubmit);
 leaderboardBody.addEventListener('click', handleTableActions);
