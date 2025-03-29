@@ -1,5 +1,5 @@
 // URL
-const BASE_URL = 'https://my-json-server.typicode.com/Ali-Sheikh-Zubeir-Noor/GamingLeaderboard';
+const BASE_URL = 'https://mock-json-server-hsby.onrender.com/api/players' ;
 
 // Fetching DOM Elements
 const playerForm = document.getElementById('playerForm');
@@ -16,7 +16,7 @@ leaderboardBody.addEventListener('click', handleTableActions);
 // Load all players
 async function loadPlayers() {
     try {
-        const response = await fetch(`${BASE_URL}/players`);
+        const response = await fetch(`${BASE_URL}`);
         if (!response.ok) throw new Error('Failed to load players');
         
         const players = await response.json();
@@ -39,7 +39,7 @@ async function handleFormSubmit(e) {
     }
 
     try {
-        const response = await fetch(`${BASE_URL}/players`, {
+        const response = await fetch(`${BASE_URL}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, score })
